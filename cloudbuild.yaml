@@ -10,5 +10,6 @@ steps:
   ]
 
 images: [
-  'gcr.io/$PROJECT_ID/helm'
+  'gcr.io/$PROJECT_ID/helm:$TAG_NAME',
+  'gcr.io/$PROJECT_ID/helm:latest'
 ]
