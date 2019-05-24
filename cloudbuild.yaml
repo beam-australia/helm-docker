@@ -3,7 +3,8 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'build', 
-      '--tag=gcr.io/$PROJECT_ID/helm', 
+      '-t', 'gcr.io/$PROJECT_ID/helm:$TAG_NAME',
+      '-t', 'gcr.io/$PROJECT_ID/helm:latest',
       '--build-arg', 'HELM_VERSION=v2.14.0', 
       '.'
   ]
